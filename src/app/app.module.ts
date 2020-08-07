@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { FormsModule }  from '@angular/forms';
 import { AppComponent } from './app.component';
 
 
@@ -21,6 +21,7 @@ import { DataApiService } from "src/app/services/data-api.service"
   ],
   imports: [
     HttpClientModule,
+    FormsModule,
     BrowserModule
   ],
   providers: [DataApiService],

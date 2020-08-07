@@ -1,18 +1,26 @@
 <main role="main" class="flex-shrink-0">
     <div class="container">
-    <h1 class="mt-5">Datos</h1>
-    <div class="input-group mb-3">
-        <div class="input-group-prepend">
-        <span class="input-group-text" id="basic-addon1">Amount</span>
+        <h1 class="mt-5">Datos</h1>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Amount</span>
+            </div>
+            <input type="text" class="form-control" placeholder="Amount"  [(ngModel)]='amount' aria-label="Amount" aria-describedby="basic-addon1">
         </div>
-        <input type="text" class="form-control" placeholder="Amount" aria-label="Amount" aria-describedby="basic-addon1">
-    </div>
-    <div class="input-group mb-3">
-        <div class="input-group-prepend">
-        <span class="input-group-text" id="basic-addon1">Item</span>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Item</span>
+            </div>
+            <input type="text" class="form-control"  placeholder="item" [(ngModel)]='item' aria-label="item" aria-describedby="basic-addon1">
         </div>
-        <input type="text" class="form-control" placeholder="item" aria-label="item" aria-describedby="basic-addon1">
+        <button (click)="mandaInformacion()" type="button" class="btn btn-primary btn-lg btn-block">Aceptar</button>
+        <!-- <br>
+        <div>
+            <div class="alert alert-success" role="alert">
+                {{ exito }}
+            </div>
+        </div> -->
+
     </div>
-    <button type="button" class="btn btn-primary btn-lg btn-block">Aceptar</button>
-    </div>
+
 </main>

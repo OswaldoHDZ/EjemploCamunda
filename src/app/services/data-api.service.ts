@@ -24,8 +24,12 @@ const url_api = "/engine-rest/process-definition/key/payment-retrieval/start/"
 @Injectable()
 export class DataApiService {
 	constructor(private http: HttpClient) { }
-	getAllbooks(login): Observable<any>{
-		console.log(variables);
-		return this.http.post(url_api,variables,httpOption);
+
+
+	getAllbooks(variabe: { variables: { amount: { value: number; type: string; }; item: { value: string; }; }; }): Observable<any>{
+		console.log(variabe);
+		return this.http.post(url_api,variabe,httpOption);
 	}
+
+	
 }
