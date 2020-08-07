@@ -12,17 +12,17 @@ export class AppComponent {
 
   constructor(private data:DataApiService){}
     
-  ngOnInit():void{
-    this.data.getAllbooks(null).subscribe(
-      data =>{
-        console.log(data)
-      },
-      err =>{
-        console.log(err.error.message);
+  // ngOnInit():void{
+  //   this.data.getAllbooks(null).subscribe(
+  //     data =>{
+  //       console.log(data)
+  //     },
+  //     err =>{
+  //       console.log(err.error.message);
         
-            }
-    );
-  }
+  //           }
+  //   );
+  // }
 }
 
 

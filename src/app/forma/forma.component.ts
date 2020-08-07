@@ -5,11 +5,17 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './forma.component.html',
   styleUrls: ['./forma.component.css']
 })
+
+
 export class FormaComponent implements OnInit {
 
-  constructor() { }
+  
 
+
+
+  constructor() { 
+    console.log("Componente cargado")
+  }
   ngOnInit(): void {
   }
-
 }
