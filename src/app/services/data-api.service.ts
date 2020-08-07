@@ -8,17 +8,6 @@ const httpOption ={
   headers: new HttpHeaders({'Content-Type': 'application/json'})
 }
 
-const variables ={
-	"variables": {
-		"amount": {
-			"value":555443423,
-			"type":"long"
-		},
-		"item": {
-			"value": "item-xyzzazazazazaz"
-		}
-	}
-}
 const url_api = "/engine-rest/process-definition/key/payment-retrieval/start/"
 
 @Injectable()
