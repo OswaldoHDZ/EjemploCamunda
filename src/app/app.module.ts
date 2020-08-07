@@ -2,15 +2,25 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { FormaComponent } from './forma/forma.component';
+
+
+//Services
+import { HttpClientModule } from "@angular/common/http"
+import { DataApiService } from "src/app/services/data-api.service"
+ 
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FormaComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule
   ],
-  providers: [],
+  providers: [DataApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
