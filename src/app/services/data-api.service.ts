@@ -4,7 +4,9 @@ import { Observable } from 'rxjs/internal/Observable'
 
 
 
-
+const httpOption ={
+  headers: new HttpHeaders({'Content-Type': 'application/json'})
+}
 
 const variables ={
 	"variables": {
@@ -17,14 +19,13 @@ const variables ={
 		}
 	}
 }
-const url_api = "/engine-rest/process-definition/key/payment-retrieval/start"
+const url_api = "/engine-rest/process-definition/key/payment-retrieval/start/"
 
 @Injectable()
 export class DataApiService {
 	constructor(private http: HttpClient) { }
-
 	getAllbooks(login): Observable<any>{
 		console.log(variables);
-		return this.http.post(url_api,variables);
+		return this.http.post(url_api,variables,httpOption);
 	}
 }
